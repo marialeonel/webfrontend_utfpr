@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+    width: 1534px;
+    background-image: url(https://cdn.wallpapersafari.com/14/87/f8CSdj.png);
+}
+
+@media screen and (max-width: 800px) {
+
+    .header {
+        width: 800px;
+    }
+
+    .button {
+        left: 500px;
+    }
+    .nav {
+        display: none;
+    }
+    .caixa_baixo {
+        width: 100px;
+    }
+    .caixa_texto {
+        width: 100px;
+    }
+    a {
+        font-size: 15px;
+    }
+
+    .Idiomas {
+        left: 400px;
+    }
+
+    .fotorookie {
+        width: 90px;
+        height: 50px;
+    }
+
+    .fotodescubra {
+        width: 90px;
+        height: 50px;
+    }
+
+
+}
+
+dialog {
+   background-color:aliceblue;
+}
+header{
+    position:relative;
+    background: linear-gradient(rgb(34, 160, 238), rgb(2, 112, 192));
+    height: 85px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 16px 0px;
+}
+
+img{
+
+    margin-left: 170px;
+    filter: drop-shadow(rgba(255, 255, 255, 0.5) 0px 0px 10px);
+}
+
+a{
+    color:azure;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    gap: 45px; 
+    list-style-type: none;
+    font-family: "Burbank Small", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0; 
+    padding-block-start: 30px; 
+    padding-left: 85px;
+}
+li {
+    text-align: center;
+    font-size: 18px;
+}
+
+.Insere{
+    display:block;
+}
+
+.dropdown_menu {
+    list-style-type: none;
+}
+.button_box{
+    height: 123.6px;
+    width: 165px;
+    margin: -50px;
+    padding-left: 45.5px; 
+    background: linear-gradient(rgb(0, 126, 208), rgb(0, 63, 139),  rgb(0, 63, 139));
+    border-style: initial; 
+    border-radius: 0px 0px 20px;
+    border: 1px solid rgb(0, 51, 112);
+    margin-left: 15px;
+    z-index: 0;
+
+}
+
+.button{
+    background: linear-gradient(rgb(255, 228, 119), rgb(255, 204, 0), rgb(255, 204, 0));
+    color: rgb(110, 78, 0);
+    height: 25px;
+    font-size: 23px; 
+    font-family: "Burbank Small", Arial, Helvetica, sans-serif;
+    font-weight: 800; 
+    text-align: center;
+    border: 1px solid rgb(181, 112, 2);
+    padding: 14px; 
+    width: 140px;
+    margin: 24px; 
+    padding-block-start: 15px;
+    padding-left: 40px;
+    border-radius: 6px; 
+    margin-top: 35px;
+    position:absolute;
+    margin-left: -45px;
+
+
+}
+
+.button_box::before{ 
+    position: absolute;
+    content: ""; 
+    margin-left: -53px;
+    width: 12%; 
+    height: 100%;
+    padding-top: 39px;
+    left: 1030px;
+    z-index: 0;
+    background: inherit;
+    transform: skew(20deg, 0deg);
+    border-radius: 0px 20px; 
+    border-bottom: inherit;
+    border-left: inherit;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 3px 0px; 
+}
+
+.before::after{
+    margin: 0; 
+}
+
+.Menu_Post{
+    margin:50px;
+}
+
+.Idiomas{ 
+    background-color: rgb(0, 132, 255);
+    position:absolute;
+    height: 15px;
+    width: 185px;
+    border-radius: 5px;
+    margin: 12px; 
+    z-index: 1;
+    padding-block-start: 20px;
+    margin-left: 1015px; 
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 16px 0px;
+}
+
+.Idiomas ul li { 
+    font-size: 17px;
+    font-family: "Burbank Small", Arial, Helvetica, sans-serif;
+    text-align: center;
+    color:azure;
+    margin-top: -45px;
+    margin-left: -70px;
+}
+.material-icons {
+    margin-left: 155px;
+    position: absolute;
+    bottom: 5px;
+    color: aliceblue;
+
+}
+.caixa_baixo {
+    position: relative; 
+    margin-top: 395px;
+    height: 1200px; 
+    width: 100%; 
+    background: rgb(34, 160, 238);
+    border: 1px solid rgb(2, 112, 192);
+
+}
+
+
+.caixa_texto{
+    position:relative; 
+    margin-left: 150px;
+    top: 40px;
+    height: 1100px;
+    width: 80%;
+    background-color:rgb(2, 112, 192);
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 16px 0px;
+}
+
+.caixa_ilha{
+    position: relative;
+    top:50px;
+    margin-left: 95px;
+    height: 160px;
+    width: 40%;
+    background: linear-gradient(rgb(149, 205, 102), rgb(99, 141, 63));
+    border-radius: 20px;
+    border: 2px solid rgb(80, 114, 51);
+    box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 8px 0px;
+    color: whitesmoke;
+}
+
+
+.caixa_caminho{
+    position:absolute;
+    top:50px;
+    margin-left: 610px;
+    height: 160px;
+    width: 40%;
+    background: linear-gradient(rgb(133, 118, 200), rgb(82, 69, 133));
+    border-radius: 20px;
+    border: 2px solid rgb(70, 59, 114);
+    box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 8px 0px;
+    color: whitesmoke;
+}
+.caixa_caminho h2{
+    font-size: 17px; 
+    position: absolute;
+    width: 60%;
+    top: 3px; 
+    right: -40px;
+    font-weight: 600;
+    font-family: "Burbank Small", Arial, Helvetica, sans-serif;
+}
+.caixa_caminho ul li p{
+    font-size: 13px;
+    position: absolute;
+    width: 52%;
+    top: 30px;
+    right: 10px;
+    font-weight: 600;
+    font-family: "Burbank Small", Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-align: justify;
+}
+
+.caixa_ilha h2{
+    font-size: 17px; 
+    position: absolute;
+    width: 60%;
+    top: 3px;
+    right: -40px;
+    font-family: "Burbank Small", Arial, Helvetica, sans-serif;
+}
+
+.caixa_ilha ul li p{
+    font-size: 13px;
+    width: 52%;
+    margin-block-start: 1em;
+    bottom: 20px;
+    text-align: justify;
+    right: 10px;
+    font-weight: 600;
+    font-family: "Burbank Small", Arial, Helvetica, sans-serif;
+    font-size: small;
+    text-align: left;
+    position: absolute;
+}
+
+.fotodescubra{
+    background-image: url(https://newcp.net/static/f0fb9361458981506073762700264671/e1953/Community-temp.png);
+    top: 5px;
+    left: 15px;
+    border-radius: 10px;
+    width: 195px;
+    height: 145px;
+    position: absolute;
+    
+}
+
+
+.fotorookie{
+    background-image: url(fotorookie.png);
+    top: 5px;
+    right: -10px;
+    border-radius: 10px;
+    width: 195px;
+    height: 145px;
+    position: relative;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*Adicionar um gap entre as caixas de texto*/
+
+.esconde {
+    display: none;
+}
+
+.wrong_title {
+    color: red;
+    display:none;
+}
+
+.wrong_img {
+    color: red;
+    display:none;
+}
+
+.wrong_text{
+    color: red;
+    display:none;
+}
+
+.campo{
+    margin-left: 50px;
+    background-color: aliceblue;
+    width: 50%;
+}
+
+.caixa_texto h1 {
+    text-align: center;
+    font-family: "Burbank Small", Arial, Helvetica, sans-serif;
+    color:rgb(5, 5, 27);
+}
+
+
