@@ -295,23 +295,12 @@ li {
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
-/*Adicionar um gap entre as caixas de texto*/
 
 .esconde {
     display: none;
 }
 
-.wrong_title {
-    color: red;
-    display:none;
-}
-
-.wrong_img {
-    color: red;
-    display:none;
-}
-
-.wrong_text{
+.wrong_title, .wrong_img, .wrong_text {
     color: red;
     display:none;
 }
@@ -326,6 +315,12 @@ li {
     text-align: center;
     font-family: "Burbank Small", Arial, Helvetica, sans-serif;
     color:rgb(5, 5, 27);
+}
+
+/*mensagem de erro do post*/
+.wrong_title_post, .wrong_msg_post {
+    color: red;
+    display:none;
 }
 
 
