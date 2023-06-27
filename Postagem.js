@@ -12,6 +12,8 @@ class Postagem{
         let error_title = document.querySelector(".wrong_title");
         let error_img = document.querySelector(".wrong_img");
         let error_msg = document.querySelector(".wrong_text");
+        let error_data = document.querySelector(".wrong_data");
+      
       
         if(this.title.length < 3 || this.title.length > 12) {
            error_title.style.display = "block";
@@ -53,7 +55,7 @@ class Postagem{
             valores.push({
                 title: this.title,
                 image: image_post,
-                message: this.message
+                message: this.message,
             });
     
             localStorage.setItem("valores", JSON.stringify(valores));
@@ -93,6 +95,7 @@ class Postagem{
                 var altura = 100;
                 img.width = largura;
                 img.height = altura;
+                img.alt = "imagem de cada postagem";
 
                 //mensagem 
                 var p = document.createElement('p');
@@ -133,72 +136,7 @@ class Postagem{
                 div.appendChild(excluir);
                 lugar_post.appendChild(div);
 
-                function alterar(event1){
-                    var div = this.parentNode;
-                    var indice = event1.target.getAttribute('data-index');
-                    //target = armazena uma referência ao elemento em que o evento ocorreu.
-
-                    var novoTitulo = div.querySelector('h3').textContent;
-                    var novaMensagem = div.querySelector('p').textContent;
-
-                    let error_title = div.querySelector(".wrong_title_post");
-                    let error_msg = div.querySelector(".wrong_msg_post");
-      
-                    if(novoTitulo.length < 3 || novoTitulo.length > 12) {
-                        error_title.style.display = "block";
-                        return;
-                    }
-                    else {
-                        error_title.style.display = 'none';
-                        valores[indice].title = novoTitulo;
-                        localStorage.setItem("valores", JSON.stringify(valores));
-                    }
-                    
-                    if(novaMensagem.length < 10 || novaMensagem.length > 30) {
-                        error_msg.style.display = "block";
-                        return;
-                    }
-                    else {
-                        error_msg.style.display = 'none'; 
-                        valores[indice].message = novaMensagem;
-                        localStorage.setItem("valores", JSON.stringify(valores));
-                    } 
-            
-                } 
-
-               function deletar(event2) {
-                    var indice = event2.target.getAttribute("data-index");
-                    valores.splice(indice, 1);
-                    localStorage.setItem("valores", JSON.stringify(valores));
-
-                    var lugar_post = document.getElementById("lugar_post");
-                    if(lugar_post.hasChildNodes()) {
-                        lugar_post.removeChild(lugar_post.children[indice]);
-                    }
-                }
-                
             }
         }
     }
-
-    buscar(){
-        const searchTerm = document.getElementById("searchInput").value.toLowerCase();
-        const lugar_post = document.getElementById("lugar_post");
-        const postagens = lugar_post.querySelectorAll("[data-postid]");
-
-        postagens.forEach(function (postagem) {
-            const title = postagem.querySelector("h3").textContent.toLowerCase();
-            const message = postagem.querySelector("p").textContent.toLowerCase();
-
-            if (title.includes(searchTerm) || message.includes(searchTerm)) {
-                postagem.style.display = "block"; 
-            } else {
-                postagem.style.display = "none"; 
-            }
-        });       
-    }
-
-    
-
-
 }
