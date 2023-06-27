@@ -42,26 +42,26 @@
         </header>
         
         <input type="text" id="searchInput" placeholder="Pesquisar...">
-        <button onclick="postagem.buscar()">Pesquisar</button>
+        <button id="Pesquisar" onclick="postagem.buscar()">Pesquisar</button>
 
         <section class="Menu_Post">
             <div class="Inserir">
-                <button class="Insere" onclick="menu.Abre_Dialog()">Inserir</button>
+                <button id="Insere" onclick="menu.Abre_Dialog()">Inserir</button>
             </div>
         </section>
 
     <dialog class="esconde" open>
 
         <div id="formulario">
-            <label> Título: </label> <br>
+            <label id="titulo"> Título: </label> <br>
             <input id="titulo_postagem" type="text" placeholder="Adicione seu título aqui!"/><br>
             <p class="wrong_title">Precisa ter entre 3 e 12 caracteres! </p>
 
-            <label> Imagem: </label> <br>
-            <input id="imagem_postagem" type="file" accept="image/png, image/jpeg"/><br>           
+            <label id="imagem"> Imagem: </label> <br>
+            <input id="colocaimag" type="file" accept="image/png, image/jpeg"/><br>           
             <p class="wrong_img">Precisa ter um arquivo do tipo png ou jpeg! </p>
 
-            <label> Mensagem: </label> <br>
+            <label id="texto"> Mensagem: </label> <br>
             <textarea id="mensagem_postagem" cols="30" rows="5" placeholder="Adicione o texto aqui!"></textarea> <br>
             <p class="wrong_text">Precisa ter entre 10 e 30 caracteres! </p>
  
