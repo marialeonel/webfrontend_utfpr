@@ -153,7 +153,7 @@ li {
 }
 
 .Idiomas{ 
-    background-color: rgb(0, 132, 255);
+    background-color: #0084ff;
     position:absolute;
     height: 15px;
     width: 185px;
@@ -169,7 +169,7 @@ li {
     font-size: 17px;
     font-family: "Burbank Small", Arial, Helvetica, sans-serif;
     text-align: center;
-    color:azure;
+    color:#0a0e0e;
     margin-top: -45px;
     margin-left: -70px;
 }
@@ -282,25 +282,21 @@ li {
     position: absolute;
     
 }
-
-
-.fotorookie{
-    background-image: url(fotorookie.png);
-    top: 5px;
-    right: -10px;
-    border-radius: 10px;
-    width: 195px;
-    height: 145px;
-    position: relative;
-}
-
-/*------------------------------------------------------------------------------------------------------------------------*/
-
 .esconde {
     display: none;
 }
 
-.wrong_title, .wrong_img, .wrong_text {
+.wrong_title {
+    color: red;
+    display:none;
+}
+
+.wrong_img {
+    color: red;
+    display:none;
+}
+
+.wrong_text{
     color: red;
     display:none;
 }
@@ -311,16 +307,116 @@ li {
     width: 50%;
 }
 
-.caixa_texto h1 {
+.caixa_texto h1 { /*Postagens*/
     text-align: center;
     font-family: "Burbank Small", Arial, Helvetica, sans-serif;
-    color:rgb(5, 5, 27);
+    color:rgb(0, 0, 0);
+    font-weight: 600;
+    background-color: #fff;
 }
 
-/*mensagem de erro do post*/
-.wrong_title_post, .wrong_msg_post {
+.wrong_title_post, .wrong_msg_post{
     color: red;
-    display:none;
+    display: none;
 }
 
 
+/*Barra de pesquisa de busca*/
+#searchInput{
+    background-color:rgb(2, 112, 192);
+    border:solid 1px;
+    border-radius:15px;
+    width:300px;
+    height: 30px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+  
+/*#{
+    float:left;
+    background-color:transparent;
+    padding-left:25px; Mexe no BUSCAR...
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:28px;
+    width:100px;
+
+
+
+    color: #fff;
+    background-image: ;
+    border: 2px ;
+    border-radius: 10px;
+    margin-top: 0;
+    font-family: Burbank small,sans-serif;
+    font-size: 13px;
+}*/
+
+#Insere{
+    background: linear-gradient(rgb(149, 205, 102), rgb(99, 141, 63));
+    color:#fff;
+    height: 25px;
+    font-size: 23px; 
+    font-family: "Burbank Small", sans-serif;
+    font-weight: 600; 
+    text-align: center;
+    border: 2px solid #3ebe5e;
+    width: 550px;
+    height: 50px;
+    border-radius: 10px;
+    margin-top: -100px;
+    margin-left: 300px;
+    box-shadow: rgba(0, 0, 0, 0.3) 4px 4px 8px 0px;
+}
+
+#Pesquisar{
+    color: #fff;
+    background-image: linear-gradient(#cef200,#9da526);
+    border: 2px solid #0c60b2;
+    margin-left: 10px;
+}
+
+#dialogo{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: #fff;
+}
+#formulario{
+    background-color: rgb(255, 255, 255);
+    
+}
+
+#titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+#titulo_postagem{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    padding-left: 25px;
+}
+
+#imagem{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+#colocaimag{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+#mensagem_postagem{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+#texto{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
