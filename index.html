@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
     <head>
         <meta html-equiv ="content-type" content = "text/html; charset = utf-8" />
@@ -12,7 +12,7 @@
 
     <body>
         <header class="menu">
-            <img src="logo.png" height ="80" align="left">
+            <img src="logo.png" height ="80" align="left" alt="logo do site">
                 
             <ul class="nav">
                 <li><a href="#">&#128512;Inicio</a> </li>
@@ -20,10 +20,14 @@
                 <li><a href="#">&#9749;Novidades</a> </li>
                 <li><a href="#">&#127847;Regras</a> </li>
 
-                <div class="button_box">
-                <li class="button">Jogue!</li> 
-                </div> 
-
+                <li> 
+                    <div class="button_box">
+                        <ul>
+                            <li class="button">Jogue!</li> 
+                        </ul>
+                    </div> 
+                </li>
+                
             </ul>
 
         <div class="Idiomas">
@@ -54,13 +58,13 @@
             <p class="wrong_title">Precisa ter entre 3 e 12 caracteres! </p>
 
             <label> Imagem: </label> <br>
-            <input id="imagem_postagem" type="file" name="image" accept="image/png, image/jpeg"/><br>           
+            <input id="imagem_postagem" type="file" accept="image/png, image/jpeg"/><br>           
             <p class="wrong_img">Precisa ter um arquivo do tipo png ou jpeg! </p>
 
-            <label> texto: </label> <br>
-            <textarea id="mensagem_postagem" cols="30" rows="5" placeholder="Adicione o texto aqui!"></textarea>
+            <label> Mensagem: </label> <br>
+            <textarea id="mensagem_postagem" cols="30" rows="5" placeholder="Adicione o texto aqui!"></textarea> <br>
             <p class="wrong_text">Precisa ter entre 10 e 30 caracteres! </p>
-
+ 
             <button onclick="postagem.Enviar()">Enviar</button>
         </div>
 
@@ -126,7 +130,5 @@
         </script>
 
     </body>
-
-
 
 </html>
