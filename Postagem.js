@@ -91,10 +91,8 @@ class Postagem{
                 //imagem
                 var img = document.createElement('img');
                 img.src = image_post;
-                var largura = 200;
-                var altura = 100;
+                var largura = 100;
                 img.width = largura;
-                img.height = altura;
                 img.alt = "Imagem de cada postagem";
 
                 //mensagem 
@@ -124,8 +122,32 @@ class Postagem{
                 error_post_msg.className = 'wrong_msg_post';
                 error_post_msg.textContent = 'Precisa ter entre 10 e 30 caracteres!';
 
-                //adicionando os elementos acima dentro do div
+                //adicionando os elementos acima dentro do div + CSS
                 var div = document.createElement('div');
+                lugar_post.style.display = "flex";
+                lugar_post.style.justifyContent = "center";
+                div.style.backgroundColor = "white";
+                div.style.width = "25%";
+                div.style.border = "3px solid";
+                div.style.borderRadius = "30px";
+                div.style.margin = "20px";
+                h3.style.textAlign = "center";
+                h3.style.fontFamily = "Burbank Small, Arial, Helvetica, sans-serif";
+                h3.style.border = "1px solid";
+                h3.style.borderRadius = "10px";
+                p.style.fontFamily = "Burbank Small, Arial, Helvetica, sans-serif";
+                p.style.textAlign = "center";
+                p.style.border = "1px solid";
+                img.style.marginLeft = "90px";
+                img.style.borderRadius = "20px";
+                editar.style.marginLeft = "80px";
+                excluir.style.marginLeft = "30px";
+                error_post_title.style.fontFamily = "Burbank Small, Arial, Helvetica, sans-serif";
+                error_post_title.style.textAlign = "center";
+                error_post_msg.style.fontFamily = "Burbank Small, Arial, Helvetica, sans-serif";
+                error_post_msg.style.textAlign = "center";
+                error_post_title.style.textAlign = "center";
+                
                 div.setAttribute("data-postid", i); 
                 div.appendChild(h3);
                 div.appendChild(error_post_title);
