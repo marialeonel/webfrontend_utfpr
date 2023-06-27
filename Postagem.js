@@ -7,7 +7,7 @@ class Postagem{
     Enviar() {
         this.title = document.getElementById("titulo_postagem").value;
         this.message = document.querySelector('textarea').value;
-        this.image = document.getElementById("imagem_postagem");
+        this.image = document.getElementById("colocaimag");
 
         let error_title = document.querySelector(".wrong_title");
         let error_img = document.querySelector(".wrong_img");
