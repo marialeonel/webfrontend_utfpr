@@ -95,6 +95,7 @@ class Postagem{
                 var altura = 100;
                 img.width = largura;
                 img.height = altura;
+                img.alt = "Imagem de cada postagem";
 
                 //mensagem 
                 var p = document.createElement('p');
