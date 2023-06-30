@@ -43,6 +43,10 @@ body {
 
 }
 
+#logo {
+    float:  left;
+}
+
 dialog {
    background-color:aliceblue;
 }
