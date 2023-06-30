@@ -78,7 +78,7 @@ class Postagem{
                 lugar_post.removeChild(lugar_post.children[i]);
             }
 
-            for (i = 0; i < valores.length; i++) {
+            for (var i = 0; i < valores.length; i++) {
                 var title_web = valores[i].title;
                 var message_web = valores[i].message;
                 var image_post = valores[i].image;
@@ -102,14 +102,17 @@ class Postagem{
 
                 //botao de Editar
                 var editar = document.createElement("button");
-                editar.addEventListener("click", alterar);
+                editar.addEventListener("click", this.alterar);
                 editar.textContent = "Editar";
                 editar.setAttribute("data-index", i);
 
 
                 //botao de Excluir
                 var excluir = document.createElement("button");
-                excluir.addEventListener("click", deletar);
+                excluir.addEventListener("click", (ev) => {
+                    this.deletar(ev, valores);
+                });
+                
                 excluir.textContent = "Excluir"; 
                 excluir.setAttribute("data-index", i);
 
@@ -157,59 +160,60 @@ class Postagem{
                 div.appendChild(editar);
                 div.appendChild(excluir);
                 lugar_post.appendChild(div);
-
-                function alterar(event1){
-                    var div = this.parentNode;
-                    var indice = event1.target.getAttribute('data-index');
-                    //target = armazena uma referência ao elemento em que o evento ocorreu.
-
-                    var novoTitulo = div.querySelector('h3').textContent;
-                    var novaMensagem = div.querySelector('p').textContent;
-
-                    let error_title = div.querySelector(".wrong_title_post");
-                    let error_msg = div.querySelector(".wrong_msg_post");
-      
-                    if(novoTitulo.length < 3 || novoTitulo.length > 12) {
-                        error_title.style.display = "block";
-                        return;
-                    }
-                    else {
-                        error_title.style.display = 'none';
-                        valores[indice].title = novoTitulo;
-                        localStorage.setItem("valores", JSON.stringify(valores));
-                    }
                     
-                    if(novaMensagem.length < 10 || novaMensagem.length > 30) {
-                        error_msg.style.display = "block";
-                        return;
-                    }
-                    else {
-                        error_msg.style.display = 'none'; 
-                        valores[indice].message = novaMensagem;
-                        localStorage.setItem("valores", JSON.stringify(valores));
-                    } 
-            
-                } 
-
-                function deletar(event2) {
-                    var remove_div = event2.target.parentNode;
-                    var indice = remove_div.getAttribute("data-index");
-                    valores.splice(indice, 1);
-                    localStorage.setItem("valores", JSON.stringify(valores));
-                  
-                    remove_div.remove();
-                    atualizar_indices();
-                }
-                  
-                function atualizar_indices() {
-                    var lugar_post = document.getElementById("lugar_post");
-                    var filhos = lugar_post.children;
-
-                    for (var i = 0; i < filhos.length; i++) {
-                        filhos[i].setAttribute("data-index", i);
-                    }
-                }
             }
+        }
+    }
+
+    alterar(event1){
+        var div = this.parentNode;
+        var indice = event1.target.getAttribute('data-index');
+        //target = armazena uma referência ao elemento em que o evento ocorreu.
+
+        var novoTitulo = div.querySelector('h3').textContent;
+        var novaMensagem = div.querySelector('p').textContent;
+
+        let error_title = div.querySelector(".wrong_title_post");
+        let error_msg = div.querySelector(".wrong_msg_post");
+
+        if(novoTitulo.length < 3 || novoTitulo.length > 12) {
+            error_title.style.display = "block";
+            return;
+        }
+        else {
+            error_title.style.display = 'none';
+            valores[indice].title = novoTitulo;
+            localStorage.setItem("valores", JSON.stringify(valores));
+        }
+        
+        if(novaMensagem.length < 10 || novaMensagem.length > 30) {
+            error_msg.style.display = "block";
+            return;
+        }
+        else {
+            error_msg.style.display = 'none'; 
+            valores[indice].message = novaMensagem;
+            localStorage.setItem("valores", JSON.stringify(valores));
+        } 
+
+    } 
+
+    deletar(event2, valores) {
+        var remove_div = event2.target.parentNode;
+        var indice = remove_div.getAttribute("data-index");
+        valores.splice(indice, 1);
+        localStorage.setItem("valores", JSON.stringify(valores));
+      
+        remove_div.remove();
+        this.atualizar_indices();
+    }
+
+    atualizar_indices() {
+        var lugar_post = document.getElementById("lugar_post");
+        var filhos = lugar_post.children;
+
+        for (var i = 0; i < filhos.length; i++) {
+            filhos[i].setAttribute("data-index", i);
         }
     }
 
