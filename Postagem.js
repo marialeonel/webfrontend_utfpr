@@ -78,7 +78,7 @@ class Postagem{
                 lugar_post.removeChild(lugar_post.children[i]);
             }
 
-            for (var i = 0; i < valores.length; i++) {
+            for (i = 0; i < valores.length; i++) {
                 var title_web = valores[i].title;
                 var message_web = valores[i].message;
                 var image_post = valores[i].image;
