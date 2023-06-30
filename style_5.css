@@ -282,6 +282,18 @@ li {
     position: absolute;
     
 }
+
+.fotorookie{
+    background-image: url(rookie.jpg);
+    top: 5px;
+    left: 15px;
+    border-radius: 10px;
+    width: 195px;
+    height: 145px;
+    position: absolute;
+    
+}
+
 .esconde {
     display: none;
 }
