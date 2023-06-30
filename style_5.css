@@ -55,9 +55,7 @@ header{
 }
 
 img{
-
     margin-left: 170px;
-    filter: drop-shadow(rgba(255, 255, 255, 0.5) 0px 0px 10px);
 }
 
 a{
@@ -79,6 +77,7 @@ ul {
     padding-block-start: 30px; 
     padding-left: 85px;
 }
+
 li {
     text-align: center;
     font-size: 18px;
@@ -344,7 +343,7 @@ li {
     cursor: pointer;
     color: black;
     font-style: italic;
-    font-weight: 800px;
+    font-weight: 800;
 }
 
 #Insere{
@@ -370,10 +369,10 @@ li {
     border: 2px solid #3ebe5e;
     margin-left: -4px;
     font-size: 20px;
-    font-weight: 600px;
     width: 120px;
     height: 37px;
     border-radius: 0px 20px 20px 0px;
+    font-weight: 500;
 }
 
 #dialogo{
