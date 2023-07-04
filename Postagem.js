@@ -102,7 +102,10 @@ class Postagem{
 
                 //botao de Editar
                 var editar = document.createElement("button");
-                editar.addEventListener("click", this.alterar);
+                //editar.addEventListener("click", this.alterar);
+                editar.addEventListener("click", (event) => {
+                    this.alterar(event, valores);
+                });
                 editar.textContent = "Editar";
                 editar.setAttribute("data-index", i);
 
@@ -165,8 +168,8 @@ class Postagem{
         }
     }
 
-    alterar(event1){
-        var div = this.parentNode;
+    alterar(event1,valores){
+        var div = event1.target.parentNode;
         var indice = event1.target.getAttribute('data-index');
         //target = armazena uma referência ao elemento em que o evento ocorreu.
 
